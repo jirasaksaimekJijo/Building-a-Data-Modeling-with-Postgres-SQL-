@@ -36,6 +36,13 @@ $ pip install ..... (Library Name)
 ### Step 1: Running PostgreSQL on Docker
 Running PostgreSQL on Docker allows you to deploy and manage a PostgreSQL database system within a Docker container. Docker is a platform that enables developers to package applications and their dependencies into lightweight containers, which can then be easily deployed across different environments.
 
+1. Run the environment so that the tools can be used to perform tasks.
+But because we have a file .yml
+
+run in command line
+```bash
+docker compose up
+```
 
 ### Step 2: Create a table for storing data on Postgres
 The tables that you can create to store the data are divided into 4 tables as you mentioned:
