@@ -39,7 +39,7 @@ Running PostgreSQL on Docker allows you to deploy and manage a PostgreSQL databa
 1. Run the environment so that the tools can be used to perform tasks.
 But because we have a file .yml
 
-The .yml file will configure the environment for Cassandra, making it ready for use.
+The .yml file will configure the environment for Postgres, making it ready for use.
 
 run in command line
 ```bash
