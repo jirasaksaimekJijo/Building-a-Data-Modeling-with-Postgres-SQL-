@@ -99,6 +99,8 @@ Used to store data related to actors or individuals who perform the events, such
 
 ### Step 3: snippet for ETL to import JSON to database
 Python code snippet for ETL (Extract, Transform, Load) to import data from a JSON file into a PostgreSQL database
+
+The necessary libraries for this task are as follows:
 ```bash
 import glob
 import json
@@ -107,25 +109,23 @@ from typing import List
 
 import psycopg2
 ```
-1.
 
+1.Connecting to our database, which is Postgres, requires creating a database, a username, and a password for the connection. Here's an example of how to write the connection:
+
+- db_name : You DB name
+- user_name : You User name
+- password_name : You Password name
 ```bash
 def main():
     conn = psycopg2.connect(
         "host=127.0.0.1 dbname=<db_name> user=<user_name> password=<password_name>"
     )
     cur = conn.cursor()
-
     process(cur, conn, filepath="../data")
-
     conn.close()
-
-
-if __name__ == "__main__":
-    main()
 ```
 
-2.r
+2.Due to all our JSON files being present here, there must be a script to fetch them. An example of such a script would be as follows:
 ```bash
 def get_files(filepath: str) -> List[str]:
     """
@@ -140,10 +140,9 @@ def get_files(filepath: str) -> List[str]:
 
     num_files = len(all_files)
     print(f"{num_files} files found in {filepath}")
-
     return all_files
 ```
-3.g
+3.To extract only the necessary data from all of these JSON files, the script would look something like this:
 ```bash
 def process(cur, conn, filepath):
     # Get list of files from filepath
