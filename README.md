@@ -22,8 +22,13 @@ To perform ETL (Extract, Transform, Load) from multiple JSON files and store the
 ## Library Python
 
 - Python 3.x
-- PostgreSQL
-- psycopg2 library (`pip install psycopg2`)
+- glob
+- json
+- os
+- psycopg2 library
+  
+```bash
+$ If fffff doesn't give
 
 ## Installation
 
