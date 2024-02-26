@@ -27,10 +27,10 @@ To perform ETL (Extract, Transform, Load) from multiple JSON files and store the
 - os
 - psycopg2 library
   
-(`If Library doesn't give`)
+`If Library doesn't give`
 ```bash
-$ If Library doesn't give
+$ pip install ..... (Library Name)
 ```
 
-## Installation
+## Working steps of this project
 
