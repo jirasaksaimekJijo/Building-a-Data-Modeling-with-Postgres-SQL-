@@ -27,12 +27,10 @@ To perform ETL (Extract, Transform, Load) from multiple JSON files and store the
 - os
 - psycopg2 library
   
+(`If Library doesn't give`)
 ```bash
-$ If fffff doesn't give
+$ If Library doesn't give
+```
 
 ## Installation
 
-1. Clone this repository to your local machine:
-
-```bash
-$ git clone https://github.com/your_username/github-event-data-processing.git
