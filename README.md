@@ -33,6 +33,55 @@ $ pip install ..... (Library Name)
 ```
 
 ## Working steps of this project
-## Step 1:
+### Step 1:
+The tables that you can create to store the data are divided into 4 tables as you mentioned:
+
+1. Events Table:
+Used to store data related to events that occur, such as ID, type, actor ID, and a foreign key constraint on actor_id.
+```bash
+    CREATE TABLE IF NOT EXISTS events (
+        id text PRIMARY KEY,
+        type text,
+        actor_id int,
+        CONSTRAINT fk_actor FOREIGN KEY(actor_id) REFERENCES actors(id)
+    )
+```
+
+2. Repo Table:
+Used to store data related to repositories associated with ID, name, URL, actor ID, and a foreign key constraint on actor_id.
+
+```bash
+    CREATE TABLE IF NOT EXISTS repo (
+        id text PRIMARY KEY,
+        name text,
+        url text,
+        actor_id int,
+        CONSTRAINT fk_actor FOREIGN KEY(actor_id) REFERENCES actors(id)
+    )
+```
+
+3. Payload Table:
+Used to store data related to payloads or data associated with events, such as JSON data sent with the event. Includes fields like push ID, size, distinct size, actor ID, and a foreign key constraint on actor_id.
+```bash
+    CREATE TABLE IF NOT EXISTS payload (
+        push_id text PRIMARY KEY,
+        size text,
+        distinct_size text,
+        actor_id int,
+        CONSTRAINT fk_actor FOREIGN KEY(actor_id) REFERENCES actors(id)
+    )
+```
+4. Actors Table:
+Used to store data related to actors or individuals who perform the events, such as ID, login, display login, gravatar ID, URL, avatar URL, and other relevant data.
+
+```bash
+    CREATE TABLE IF NOT EXISTS actors (
+        id int PRIMARY KEY,
+        login text,
+        display_login text,
+        gravatar_id text,
+        url text,
+        avatar_url text
+```
 
 
