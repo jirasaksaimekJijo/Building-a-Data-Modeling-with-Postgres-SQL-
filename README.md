@@ -33,7 +33,11 @@ $ pip install ..... (Library Name)
 ```
 
 ## Working steps of this project
-### Step 1:
+### Step 1: Running PostgreSQL on Docker
+Running PostgreSQL on Docker allows you to deploy and manage a PostgreSQL database system within a Docker container. Docker is a platform that enables developers to package applications and their dependencies into lightweight containers, which can then be easily deployed across different environments.
+
+
+### Step 2: Create a table for storing data on Postgres
 The tables that you can create to store the data are divided into 4 tables as you mentioned:
 
 1. Events Table:
@@ -83,5 +87,4 @@ Used to store data related to actors or individuals who perform the events, such
         url text,
         avatar_url text
 ```
-
 
