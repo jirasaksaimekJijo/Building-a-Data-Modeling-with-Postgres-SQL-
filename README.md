@@ -43,6 +43,8 @@ run in command line
 ```bash
 docker compose up
 ```
+When run, the tool we have configured in the .yml file will execute.
+To enable and proceed with the next steps.
 
 ### Step 2: Create a table for storing data on Postgres
 The tables that you can create to store the data are divided into 4 tables as you mentioned:
